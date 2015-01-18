@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/" />
+<title>Open Source Xara Xtreme - Contributor Agreement</title>
+<meta name="title" content="Contributor Agreement" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="Generator" content="Joomla! - Copyright (C) 2005 Open Source Matters. All rights reserved." />
+<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" href="http://web.archive.org/web/20060110095114im_/http://www.xaraxtreme.org/images/favicon.ico" />
+	<link href="http://web.archive.org/web/20060110095114cs_/http://www.xaraxtreme.org/templates/default/css/template_css.css"
+       rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://web.archive.org/web/20060110095114js_/http://www.xaraxtreme.org/templates/default/lib/global.js"></script>
+</head>
+<body style="background-image:url('http://web.archive.org/web/20060110095114im_/http://www.xaraxtreme.org/images/bg.gif');background-repeat:repeat-x;">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="http://staticweb.archive.org/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="http://staticweb.archive.org/js/graph-calc.js" ></script>
+<script type="text/javascript" src="http://staticweb.archive.org/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1356998399999;
+var wbPrefix = "http://web.archive.org/web/";
+var wbCurrentUrl = "http:\/\/www.xaraxtreme.org\/content\/view\/31\/66\/";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth=450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "10";
+var displayMonth = "Jan";
+var displayYear = "2006";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(http://staticweb.archive.org/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="http://wayback.archive.org/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="http://staticweb.archive.org/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="http://wayback.archive.org/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.xaraxtreme.org/content/view/31/66/" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20060110095114" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20051126015423/http://www.xaraxtreme.org/content/view/31/66/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Nov 2005"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:51:14 Jan 10, 2006">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20060501122832/http://www.xaraxtreme.org/content/view/31/66/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="1 May 2006"><strong>MAY</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20051126015423/http://www.xaraxtreme.org/content/view/31/66/" title="1:54:23 Nov 26, 2005" style="background-color:transparent;border:none;"><img src="http://staticweb.archive.org/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:51:14 Jan 10, 2006">10</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20060501122832/http://www.xaraxtreme.org/content/view/31/66/" title="12:28:32 May 1, 2006" style="background-color:transparent;border:none;"><img src="http://staticweb.archive.org/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2005
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:51:14 Jan 10, 2006">2006</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="http://web.archive.org/web/20070804044041/http://www.xaraxtreme.org/content/view/31/66/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Aug 2007"><strong>2007</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="http://wayback.archive.org/web/20060110095114*/http://www.xaraxtreme.org/content/view/31/66/" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>11 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">26 Nov 05 - 25 Dec 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="http://wayback.archive.org/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000010_2006:0:100010001000_2007:-1:000000020000_2008:-1:000101000000_2009:-1:000000000000_2010:-1:010000000002_2011:-1:000000000000_2012:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="http://staticweb.archive.org/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="http://staticweb.archive.org/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(http://staticweb.archive.org/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(http://staticweb.archive.org/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="xaralogo"><a href="http://web.archive.org/web/20060110095114/http://www.xara.com/" target="_blank"><img src="http://web.archive.org/web/20060110095114im_/http://www.xaraxtreme.org/images/xaralogo.gif" width="112" height="59" border="0"></a></div>
+<div class="title" align="right">		<table cellpadding="0" cellspacing="0" class="moduletable">
+				<tr>
+			<td>
+				
+<form action="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/component/option,com_search/Itemid,40/" method="get">
+	<div align="left" class="search">
+		<input name="searchword" id="mod_search_searchword" style="width:100px" alt="search" class="inputbox" type="text" size="8" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" /><input type="submit" style="width:70px;" value="Search" class="button"/>	</div>
+
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value="40" />	
+</form>
+			</td>
+		</tr>
+		</table>
+		</div>
+<table cellpadding="0" cellspacing="0" border="0" class="menu">
+<tr>
+<td nowrap class="tabs" valign="middle" id="tab1" onclick="change_class(1); document.location='/';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/" class="tab">Home</a></td>
+<td nowrap class="tabs" valign="middle" id="tab3" onclick="change_class(3); document.location='/about/';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/about/" class="tab">About</a></td>
+<td nowrap class="tabs" valign="middle" id="tab5" onclick="change_class(5); document.location='/download/';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/download/" class="tab">Download</a></td>
+<td nowrap class="tabs" valign="middle" id="tab2" onclick="change_class(2); document.location='/faqs.html';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/faqs.html" class="tab">FAQs</a></td>
+<td nowrap class="tabs" valign="middle" id="tab4" onclick="change_class(4); document.location='/community/';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/community/" class="tab">Community</a></td>
+<td nowrap class="tabs" valign="middle" id="tab6" onclick="change_class(6); document.location='/developers/';"><a href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/developers/" class="tab">Developers</a></td>
+</tr>
+</table>
+<script type="text/javascript" src="http://web.archive.org/web/20060110095114js_/http://www.xaraxtreme.org/templates/default/lib/tabs.js"></script>
+<div class="content">
+			<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+				Contributor Agreement								</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+			<h3>Background</h3>
+<div><span class="838263513-22112005"><font face="Arial" size="2">Xara has to continue to sell versions of Xara X in order to continue as a business. This is what has funded the&nbsp;past development and we hope will continue to fund the future development of the product including the open-source version.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">
+<div><span class="838263513-22112005"><font face="Arial" size="2">Users can choose whether to use the free open source version or pay for the commercial versions.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span>&nbsp;</div>This requires that the product is available under different licenses. One license is the open-source GPL licence that enables the product and source code to be used freely as per the terms of the GPL.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">The other licenses are our normal </font></span><span class="838263513-22112005"><font face="Arial" size="2">commercial licenses that are more restrictive. Because our commercial versions include third party licensed products and code (e.g. plug-ins, Pantone color libraries and other proprietary code or data)&nbsp;the commercial license, as normal, does not allow copying and does not provide all the source code - </font></span><span class="838263513-22112005"><font face="Arial" size="2">which&nbsp;makes it incompatible with the GPL. Therefore in order to continue to sell these products Xara needs the right to release the product, including any modifications it has accepted, under different licenses.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span></div><span class="838263513-22112005">
+<div><span class="838263513-22112005"><font face="Arial" size="2">Since only the copyright holder can license their work under different licenses this requires that Xara get an agreement that allows it to use any third-party contributions in this way. It is necessary that all contributors who want their work included in the official Xara versions sign this agreement, but it's only necessary to do this once.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span>&nbsp;</div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">Some other open-source projects ask for a copyright assignment in order to make this possible. This involves the copyright being transferred from the author to the organisation and results in the author losing some rights.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span>&nbsp;</div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">We are proposing a simpler, more fair approach where the author shares the copyright with Xara, so Xara can then use the contribution in the normal retail versions.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">&nbsp;</font></span>&nbsp;</div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">The&nbsp;Contributor Agreements provides some other important advantages to all users of the open-source project:</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">• It provides clarity and provenance for the copyrights on the project</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">• It reduces the likelihood of copyright disagreements or spurious legal claims</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">•&nbsp;<font size="2">We protect each other against software patent claims. Software patents are, in our opinion, a potential danger to all open-source projects. The GPL does not (yet) include patent grant or defence clauses. So in the document, we agree that you won't sue us for breach of any software patents you might have (relevant if you happen to be a big corporate), and we also agree with you that if any contribution you make happens to infringe any patents we hold, you can use that patent not only in XaraLX, but in any GPL project. This effectively eliminates the possibility of patent litigation between members of the XaraLX contributor community.</font></font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2"><font size="2">&nbsp;</font></font></span>&nbsp;</div><span class="838263513-22112005"><font face="Arial" size="2"><font size="2">
+<div>The document is clear and simple to understand and only a single page (just).</div></font></font></span>
+<div><font face="Arial"><font size="2"><span class="838263513-22112005">&nbsp;</span><span class="838263513-22112005">&nbsp;</span></font></font></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">It's important to realise that as an author and contributor:</font></span></div><span class="838263513-22112005"><font face="Arial" size="2">
+<div><span class="838263513-22112005"><font face="Arial" size="2">• This is an entirely voluntary agreement. Your are free to do anything with the source code subject to the terms of the GPL. It's only if you want to have your contributions included in the official Xara tree that we ask that this agreement be signed.</font></span></div>
+<div>• You are not losing any rights. You still maintain ownership of your copyright and can license it as you wish. Your basic freedoms and copyright in your code are preserved.</div></font></span></span>
+<h4>Why does this agreement help you?</h4><span class="838263513-22112005"><span class="838263513-22112005"><font face="Arial" size="2"><font size="2">
+<p>Here's how it helps you and the open-source community:</p>
+<p>• It allows us to incorporate your contributions into our commercial version, so we have a better product to sell (without a commercial version, the open-source proposition is simply not financially viable for us). This helps you too, as we have more money to fund developers who are working on the open source version. More importantly, it means we only have a single tree to maintain, making it much easier for both you and us to work on code that benefits both versions.<br />
+•&nbsp;It clarifies the copyright and patent position of the code. Whilst the GPL is much respected, it's quite an old license. There are well known instances of companies who do not subscribe to the open-source ethic attempting to spread fear, uncertainty and doubt about GPL code with multiple contributors (e.g. SCO). By maintaining a "paper trail" of contributors, holding joint copyright ownership on the open-source version, and making sure (as far as possible) no contributor can later sue for patent infringement, we help make the open-source version immune from this sort of attack.<br />
+• It guarantees that we release under the GPL any modifications we make to files you contribute to. Under a more normal copyright assignment, we wouldn't need to do that. But we think it's important that we too share our contributions to these files.<br />
+• It protects you against patent claims. Whilst we despise software patents, we recognize that some day Xara might change ownership, and attitudes might change (e.g. SCO again). We want to ensure you, and the user community, are&nbsp;protected.&nbsp;</p></font></font></span></span>
+<p>You can obtain the agreement here: <a title="" href="http://web.archive.org/web/20060110095114/http://www.xaraxtreme.org/images/pdf/24-11-05/contributor_agreement.pdf" target="_blank"><strong>Contributor Agreement PDF</strong></a></p>
+<h4>A simple (non-legal) explanation of each of the clauses:</h4>
+<div><span class="838263513-22112005"><font face="Arial" size="2">1) Gives you an opt-out, and clarifies what we mean by contribution and&nbsp;GPL.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">2) You agree to share the copyright.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">3) Clarifies that we (and you) can't and won't seek to restrict what the other can do with the copyright.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">4) <font size="2">Allows us (and anyone we license the code to) the right to use any patents you own that your contribution requires.</font></font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">5) You agree your contribution is your original work.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">6) <font size="2">Allows you, and anyone else using code with your contribution in, the right to use any patents owned by Xara that your contribution or the product requires</font>.</font></span></div>
+<div><span class="838263513-22112005"><font face="Arial" size="2">7) Xara agrees that if we make any modifications to files containing your contributions, we'll make those files available under the GPL.</font></span></div>
+<div>8) This agreement will apply to all contributions you might make. i.e. you only have to sign this once.</div>
+<div>9) Necessary legal jargon to make it a contract in the UK.</div>
+<div>10) You've kept a copy of your signed agreement.</div>
+<div><span class="838263513-22112005">&nbsp;</span></div>			</td>
+		</tr>
+					<tr>
+				<td colspan="2" align="left" class="modifydate"><br><hr>Last Updated: Friday, 25 November 2005				</td>
+			</tr>
+					</table>
+		<span class="article_seperator">&nbsp;</span>
+		</div>
+
+<script type="text/javascript"><!--
+var A="00000979";
+var P="DetectName";
+var U="DetectUrl";
+//--></script>
+<script type="text/javascript" src="http://web.archive.org/web/20060110095114js_/http://www.3dstats.com/cgi-bin/3dstrack.cgi?usr=00000979"></script>
+<noscript>
+<img src="http://web.archive.org/web/20060110095114im_/http://www.3dstats.com/cgi-bin/connect.cgi?usr=00000979Pauto" border=0 height=0 width=0>
+</noscript>
+
+</body>
+</html><!-- 1136886673 -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:51:14 Jan 10, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:11:54 Dec 14, 2012.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,28 @@
+Here's the waiver as Intel Legal worded it, and as it was linked on
+the Clutter Bugzilla:
+
+<<<
+In order for your changes or enhancements to the Clutter Project to be
+accepted into the mainline version, you must agree to the following
+waiver of your copyrights in those changes. As used below "submitter"
+means the author of those changes that are submitted for inclusion in
+the mainline version of the Clutter Project, which can be an
+individual, or an organization (such as a corporation or partnership).
+
+By submitting proposed changes and enhancements to the Clutter
+Project, the submitter certifies that: 1) the submitter is the
+original and sole author of those changes (but not the underlying
+Clutter Project); 2) the submitter has sufficient authority to act on
+behalf of his or her employer, to the extent that changes and
+enhancements are owned by such employer; and 3) the submitter
+disclaims and waives all copyrights (both present, and future,
+including the right to enforce) in those changes and enhancements to
+the Clutter Project, and hereby waives any moral rights that submitter
+may possess in and to those changes and enhancements. The submitter
+recognizes that, by waiving copyrights and moral rights in those
+changes and enhancements, those changes and enhancements may be freely
+reproduced, distributed, transmitted, used, modified, built upon, or
+otherwise exploited by anyone for any purpose, commercial or
+non-commercial, and in any way, including by methods that have not yet
+been invented or conceived.
+>>>
